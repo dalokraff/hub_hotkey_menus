@@ -29,12 +29,17 @@ local mod = get_mod("hub_hotkey_menus")
 -- ##########################################################
 -- ################## Variables #############################
 
+local valid_lvls = {
+	shooting_range = true,
+	hub = true,
+}
+
 -- ##########################################################
 -- ############## Internal Functions ########################
 
 local is_in_hub = function()
 	if Managers and Managers.state and Managers.state.game_mode then
-		return Managers.state.game_mode:game_mode_name() == "hub"
+		return valid_lvls[Managers.state.game_mode:game_mode_name()] or false
 	end
 end
 
@@ -88,8 +93,37 @@ mod.activate_training_grounds_view = function(self)
   activate_hub_view("training_grounds_view")
 end
 
+mod.activate_social_view = function(self)
+	activate_hub_view("social_menu_view")
+end
+
+mod.activate_inventory_view = function(self)
+	activate_hub_view("inventory_background_view")
+end
+
+-- mod.activate_main_menu_view = function(self)
+-- 	activate_hub_view("main_menu_background_view")
+-- end
+
+
+
 -- ##########################################################
 -- ################### Hooks ################################
+
+mod:hook(_G, "require", function(func, file_name, ...)
+	local result = func(file_name, ...)
+	
+	if file_name == "scripts/settings/game_mode/game_mode_settings_hub" then
+		print("check here")
+		-- for k,v in pairs(result.aliases.hotkey_inventory) do
+		-- 	print(k)
+		-- end
+		result.hotkeys.hotkey_inventory = ""
+
+	end
+
+	return result
+end)
 
 -- ##########################################################
 -- ################### Script ###############################
