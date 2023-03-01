@@ -37,14 +37,14 @@ local valid_lvls = {
 -- ##########################################################
 -- ############## Internal Functions ########################
 
-local is_in_hub = function()
+local is_in_valid_lvl = function()
 	if Managers and Managers.state and Managers.state.game_mode then
 		return valid_lvls[Managers.state.game_mode:game_mode_name()] or false
 	end
 end
 
 local can_activate_hub_view = function(ui_manager, view)
-	return is_in_hub() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view))
+	return is_in_valid_lvl() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view))
 end
 
 local activate_hub_view = function(view)
@@ -112,16 +112,36 @@ end
 
 mod:hook(_G, "require", function(func, file_name, ...)
 	local result = func(file_name, ...)
-	
 	if file_name == "scripts/settings/game_mode/game_mode_settings_hub" then
 		print("check here")
 		-- for k,v in pairs(result.aliases.hotkey_inventory) do
 		-- 	print(k)
 		-- end
 		result.hotkeys.hotkey_inventory = ""
-
 	end
 
+	-- hub
+	-- prologue_hub
+	-- hub_singleplay
+
+	if file_name == "scripts/settings/game_mode/game_mode_settings" then
+		-- print("check here")
+		-- for k,v in pairs(result.hub) do
+		-- 	print(k)
+		-- end
+		result.hub.hotkeys = {}
+	end
+
+	
+	-- if file_name == "scripts/settings/input/default_view_input_settings" then
+	-- 	result.settings.hotkey_inventory = nil
+	-- end
+	
+	-- if type(result) == "table" then
+	-- 	if type(result.aliases) == "table" then
+	-- 		print(result.aliases.hotkey_inventory)
+	-- 	end
+	-- end
 	return result
 end)
 
