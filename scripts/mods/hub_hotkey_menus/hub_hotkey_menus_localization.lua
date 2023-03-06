@@ -32,7 +32,7 @@ return {
   },
   open_crafting_view_key_description = {
     en = "Opens the Crafting view.",
-    ["zh-cn"] = "打开 0-7-7 海德昂界面。",
+    ["zh-cn"] = "打开 O-7-7 海德昂界面。",
   },
   -- credits_vendor_background_view
   open_credits_vendor_view_key = {
