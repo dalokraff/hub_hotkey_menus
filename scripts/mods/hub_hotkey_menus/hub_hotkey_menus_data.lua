@@ -7,6 +7,11 @@ return {
   options = {
     widgets = {
       {
+        setting_id      = "enable_in_psykanium",
+        type            = "checkbox",
+        default_value   = true,
+      },
+      {
         setting_id      = "open_barber_view_key",
         type            = "keybind",
         default_value   = {},
