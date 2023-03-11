@@ -7,6 +7,14 @@ return {
     en = "Open various menus from the hub world with hotkeys.",
     ["zh-cn"] = "通过快捷键打开哀星号上的各种菜单。",
   },
+  enable_in_psykanium = {
+    en = "Enable in Psykanium",
+    ["zh-cn"] = "在灵能室启用",
+  },
+  enable_in_psykanium_description = {
+    en = "Enable hotkeys in Psykanium.",
+    ["zh-cn"] = "在灵能室启用快捷键。",
+  },
   -- barber_vendor_background_view
   open_barber_view_key = {
     en = "Barber",

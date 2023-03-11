@@ -38,8 +38,17 @@ local is_in_hub = function()
 	end
 end
 
+local is_in_psykanium = function()
+	if Managers and Managers.state and Managers.state.game_mode then
+		return Managers.state.game_mode:game_mode_name() == "shooting_range"
+	end
+end
+
 local can_activate_hub_view = function(ui_manager, view)
-	return is_in_hub() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view))
+	if (not is_in_hub()) and (not (is_in_psykanium() and mod:get("enable_in_psykanium"))) then
+		return false
+	end
+	return (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view))
 end
 
 local activate_hub_view = function(view)
