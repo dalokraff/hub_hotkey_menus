@@ -7,7 +7,7 @@ return {
   mod_description = {
     en = "Open various menus from the hub world with hotkeys.",
     ["zh-cn"] = "通过快捷键打开哀星号上的各种菜单。",
-    ru = "Открывайте различные меню в Хабе с помощью горячих клавиш.",
+    ru = "Hub Hotkey Menus - Открывайте различные меню в Хабе с помощью горячих клавиш.",
   },
   -- barber_vendor_background_view
   open_barber_view_key = {
