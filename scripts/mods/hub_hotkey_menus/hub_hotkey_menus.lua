@@ -97,9 +97,9 @@ mod.activate_social_view = function(self)
 	activate_hub_view("social_menu_view")
 end
 
-mod.activate_inventory_view = function(self)
-	activate_hub_view("inventory_background_view")
-end
+-- mod.activate_inventory_view = function(self)
+-- 	activate_hub_view("inventory_background_view")
+-- end
 
 -- mod.activate_main_menu_view = function(self)
 -- 	activate_hub_view("main_menu_background_view")
@@ -109,41 +109,6 @@ end
 
 -- ##########################################################
 -- ################### Hooks ################################
-
-mod:hook(_G, "require", function(func, file_name, ...)
-	local result = func(file_name, ...)
-	if file_name == "scripts/settings/game_mode/game_mode_settings_hub" then
-		print("check here")
-		-- for k,v in pairs(result.aliases.hotkey_inventory) do
-		-- 	print(k)
-		-- end
-		result.hotkeys.hotkey_inventory = ""
-	end
-
-	-- hub
-	-- prologue_hub
-	-- hub_singleplay
-
-	if file_name == "scripts/settings/game_mode/game_mode_settings" then
-		-- print("check here")
-		-- for k,v in pairs(result.hub) do
-		-- 	print(k)
-		-- end
-		result.hub.hotkeys = {}
-	end
-
-	
-	-- if file_name == "scripts/settings/input/default_view_input_settings" then
-	-- 	result.settings.hotkey_inventory = nil
-	-- end
-	
-	-- if type(result) == "table" then
-	-- 	if type(result.aliases) == "table" then
-	-- 		print(result.aliases.hotkey_inventory)
-	-- 	end
-	-- end
-	return result
-end)
 
 -- ##########################################################
 -- ################### Script ###############################
