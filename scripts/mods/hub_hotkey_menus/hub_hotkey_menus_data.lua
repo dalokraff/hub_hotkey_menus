@@ -78,14 +78,14 @@ return {
         keybind_type    = "function_call",
         function_name   = "activate_social_view",
       },
-      -- {
-      --   setting_id      = "open_inventory_view_key",
-      --   type            = "keybind",
-      --   default_value   = {},
-      --   keybind_trigger = "pressed",
-      --   keybind_type    = "function_call",
-      --   function_name   = "activate_inventory_view",
-      -- },
+      {
+        setting_id      = "open_inventory_view_key",
+        type            = "keybind",
+        default_value   = {},
+        keybind_trigger = "pressed",
+        keybind_type    = "function_call",
+        function_name   = "activate_inventory_view",
+      },
       -- {
       --   setting_id      = "open_main_menu_view_key",
       --   type            = "keybind",
