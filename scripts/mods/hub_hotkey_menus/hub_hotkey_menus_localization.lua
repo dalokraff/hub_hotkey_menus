@@ -102,7 +102,7 @@ return {
     en = "Inventory",
   },
   open_inventory_view_key_description = {
-    en = "Opens the Inventory view. \nNote: This hotkey only applies in the Meat Grinder/Psykanium.\nThe Main Hub uses the offical default keybinding",
+    en = "Opens the Inventory view.",
   },
   -- social_view
   open_social_view_key = {
