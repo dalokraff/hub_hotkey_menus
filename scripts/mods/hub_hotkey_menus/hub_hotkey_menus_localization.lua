@@ -5,7 +5,7 @@ return {
     ru = "Меню горячих клавиш для Хаба",
   },
   mod_description = {
-    en = "Open various menus from the hub world with hotkeys.",
+    en = "Open various menus from the Main Hub and Meat Grinder with hotkeys.",
     ["zh-cn"] = "通过快捷键打开哀星号上的各种菜单。",
     ru = "Hub Hotkey Menus - Открывайте различные меню в Хабе с помощью горячих клавиш.",
   },
@@ -96,5 +96,20 @@ return {
     en = "Opens the Training Grounds view.",
     ["zh-cn"] = "打开灵能室界面。",
     ru = "Войти в Псайканиум на Стрельбище.",
+  },
+  -- inventory_view
+  open_inventory_view_key = {
+    en = "Inventory",
+  },
+  open_inventory_view_key_description = {
+    en = "Opens the Inventory view.",
+  },
+  -- social_view
+  open_social_view_key = {
+    en = "Social",
+    ["zh-cn"] = "",
+  },
+  open_social_view_key_description = {
+    en = "Opens the Soical view.",
   },
 }
