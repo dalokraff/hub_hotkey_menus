@@ -100,15 +100,19 @@ return {
   -- inventory_view
   open_inventory_view_key = {
     en = "Inventory",
+    ["zh-cn"] = "物品库存",
   },
   open_inventory_view_key_description = {
     en = "Opens the Inventory view.",
+    ["zh-cn"] = "打开物品库存界面。",
   },
   -- social_view
   open_social_view_key = {
     en = "Social",
+    ["zh-cn"] = "社交",
   },
   open_social_view_key_description = {
     en = "Opens the Soical view.",
+    ["zh-cn"] = "打开社交界面。",
   },
 }
