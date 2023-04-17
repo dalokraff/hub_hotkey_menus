@@ -2,7 +2,7 @@ return {
   mod_name = {
     en = "Hub Hotkey Menus",
     ["zh-cn"] = "大厅菜单快捷键",
-    ru = "Меню горячих клавиш для Хаба",
+    ru = "Горячие клавиши меню для Хаба",
   },
   mod_description = {
     en = "Open various menus from the Main Hub and Meat Grinder with hotkeys.",
@@ -18,7 +18,7 @@ return {
   open_barber_view_key_description = {
     en = "Opens the Barber view.",
     ["zh-cn"] = "打开理发师兼外科医生界面。",
-    ru = "Открыть меню Цирюльника-хирурга.",
+    ru = "Открывает меню Цирюльника-хирурга.",
   },
   -- contracts_background_view
   open_contracts_view_key = {
@@ -29,7 +29,7 @@ return {
   open_contracts_view_key_description = {
     en = "Opens the Contracts view.",
     ["zh-cn"] = "打开梅尔克大人的采购店界面。",
-    ru = "Открыть Реквизиториум сира Мелка.",
+    ru = "Открывает Реквизиториум сира Мелка.",
   },
   -- crafting_view
   open_crafting_view_key = {
@@ -40,7 +40,7 @@ return {
   open_crafting_view_key_description = {
     en = "Opens the Crafting view.",
     ["zh-cn"] = "打开 O-7-7 海德昂界面。",
-    ru = "Открыть Святилище Омниссии.",
+    ru = "Открывает Святилище Омниссии.",
   },
   -- credits_vendor_background_view
   open_credits_vendor_view_key = {
@@ -51,7 +51,7 @@ return {
   open_credits_vendor_view_key_description = {
     en = "Opens the Credits Vendor view.",
     ["zh-cn"] = "打开军械交易所界面。",
-    ru = "Открыть магазин \"Обмен снаряжения\".",
+    ru = "Открывает меню \"Обмен снаряжения\".",
   },
   -- inbox_view
   open_inbox_view_key = {
@@ -62,7 +62,7 @@ return {
   open_inbox_view_key_description = {
     en = "Opens the Inbox view.",
     ["zh-cn"] = "打开信件界面。",
-    ru = "Открыть меню \"Выкупить любой лишний предмет\".",
+    ru = "Открывает меню \"Выкупить любой лишний предмет\".",
   },
   -- mission_board_view
   open_mission_board_view_key = {
@@ -73,7 +73,7 @@ return {
   open_mission_board_view_key_description = {
     en = "Opens the Mission Board view.",
     ["zh-cn"] = "打开任务面板。",
-    ru = "Открыть меню выбора миссий Улья Терциум.",
+    ru = "Открывает меню выбора миссий Улья Терциум.",
   },
   -- store_view
   open_premium_store_view_key = {
@@ -84,7 +84,7 @@ return {
   open_premium_store_view_key_description = {
     en = "Opens the Premium Store view.",
     ["zh-cn"] = "打开准将的服装界面。",
-    ru = "Открыть премиум-магазин \"Одеяния от Командора\".",
+    ru = "Открывает премиум-магазин \"Одеяния от Командора\".",
   },
   -- training_grounds_view
   open_training_grounds_view_key = {
@@ -95,24 +95,28 @@ return {
   open_training_grounds_view_key_description = {
     en = "Opens the Training Grounds view.",
     ["zh-cn"] = "打开灵能室界面。",
-    ru = "Войти в Псайканиум на Стрельбище.",
+    ru = "Открывает меню входа на Стрельбище в Псайканиуме.",
   },
   -- inventory_view
   open_inventory_view_key = {
     en = "Inventory",
     ["zh-cn"] = "物品库存",
+    ru = "Инвентарь",
   },
   open_inventory_view_key_description = {
     en = "Opens the Inventory view.",
     ["zh-cn"] = "打开物品库存界面。",
+    ru = "Открывает окно Инвентаря.",
   },
   -- social_view
   open_social_view_key = {
     en = "Social",
     ["zh-cn"] = "社交",
+    ru = "Социальное меню",
   },
   open_social_view_key_description = {
-    en = "Opens the Soical view.",
+    en = "Opens the Social view.",
     ["zh-cn"] = "打开社交界面。",
+    ru = "Открывает меню \"Ударная группа\"",
   },
 }
