@@ -9,6 +9,18 @@ return {
     ["zh-cn"] = "通过快捷键打开哀星号上的各种菜单。",
     ru = "Hub Hotkey Menus - Открывайте различные меню в Хабе с помощью горячих клавиш.",
   },
+  enable_in_pykhanium = {
+    en = "Enable Hotkeys in the Psykhanium",
+    ru = "Включить горячие клавиши в Психаниуме",
+  },
+  close_menu_with_hotkey = {
+    en = "Close menus",
+    ru = "Закрытие меню",
+  },
+  close_menu_with_hotkey_tooltip = {
+    en = "Enables the closing of menus with their respective hotkeys.",
+    ru = "Позволяет закрывать меню с помощью соответствующих горячих клавиш.",
+  },
   -- barber_vendor_background_view
   open_barber_view_key = {
     en = "Barber",
