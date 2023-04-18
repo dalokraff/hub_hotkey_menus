@@ -12,14 +12,17 @@ return {
   enable_in_pykhanium = {
     en = "Enable Hotkeys in the Psykhanium",
     ru = "Включить горячие клавиши в Психаниуме",
+    ["zh-cn"] = "在灵能室启用快捷键",
   },
   close_menu_with_hotkey = {
     en = "Close menus",
     ru = "Закрытие меню",
+    ["zh-cn"] = "关闭菜单",
   },
   close_menu_with_hotkey_tooltip = {
     en = "Enables the closing of menus with their respective hotkeys.",
     ru = "Позволяет закрывать меню с помощью соответствующих горячих клавиш.",
+    ["zh-cn"] = "允许用对应的快捷键关闭菜单。",
   },
   -- barber_vendor_background_view
   open_barber_view_key = {
