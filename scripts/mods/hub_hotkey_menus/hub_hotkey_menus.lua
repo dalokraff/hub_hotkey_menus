@@ -122,11 +122,13 @@ local close_sub_views = function(view, ui_manager)
 end
 
 local close_views = function(view, ui_manager)
-	local activeViews = ui_manager:active_views()
-	for _, active_view in pairs(activeViews) do
-		if active_view == view then
-			ui_manager:close_all_views()
-			return false
+	if mod:get("close_menu_with_hotkey") then
+		local activeViews = ui_manager:active_views()
+		for _, active_view in pairs(activeViews) do
+			if active_view == view then
+				ui_manager:close_all_views()
+				return false
+			end
 		end
 	end
 	return true
