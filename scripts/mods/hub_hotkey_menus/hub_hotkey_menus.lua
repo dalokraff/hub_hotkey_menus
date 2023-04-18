@@ -54,6 +54,7 @@ mod.PsykaniumInvHotkey_views = {
 
 local is_in_valid_lvl = function()
 	if Managers and Managers.state and Managers.state.game_mode then
+		valid_lvls["shooting_range"] = mod:get("enable_in_pykhanium")
 		return valid_lvls[Managers.state.game_mode:game_mode_name()] or false
 	end
 end
@@ -116,11 +117,15 @@ local can_activate_view = function(ui_manager, view)
 	return is_in_valid_lvl() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view)) and PsykaniumInvHotkey_patch(view)
 end
 
+local close_sub_views = function(view, ui_manager)
+	
+end
+
 local close_views = function(view, ui_manager)
 	local activeViews = ui_manager:active_views()
 	for _, active_view in pairs(activeViews) do
 		if active_view == view then
-			ui_manager:close_view(view)
+			ui_manager:close_all_views()
 			return false
 		end
 	end

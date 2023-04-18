@@ -7,6 +7,17 @@ return {
   options = {
     widgets = {
       {
+        setting_id    = "enable_in_pykhanium",
+        type          = "checkbox",
+        default_value = true,
+      },
+      {
+        setting_id    = "close_menu_with_hotkey",
+        type          = "checkbox",
+        default_value = true,
+        tooltip = "close_menu_with_hotkey_tooltip",
+      },
+      {
         setting_id      = "open_barber_view_key",
         type            = "keybind",
         default_value   = {},
