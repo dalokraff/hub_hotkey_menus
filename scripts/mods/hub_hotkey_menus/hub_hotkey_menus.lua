@@ -117,10 +117,6 @@ local can_activate_view = function(ui_manager, view)
 	return is_in_valid_lvl() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view)) and PsykaniumInvHotkey_patch(view)
 end
 
-local close_sub_views = function(view, ui_manager)
-	
-end
-
 local close_views = function(view, ui_manager)
 	if mod:get("close_menu_with_hotkey") then
 		local activeViews = ui_manager:active_views()
