@@ -185,6 +185,10 @@ mod.activate_inventory_view = function(self)
 	activate_hub_view("inventory_background_view")
 end
 
+mod.activate_commissary_view = function(self)
+	activate_hub_view("cosmetics_vendor_background_view")
+end
+
 -- mod.activate_main_menu_view = function(self)
 -- 	activate_hub_view("main_menu_background_view")
 -- end

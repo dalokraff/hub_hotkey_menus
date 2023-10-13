@@ -134,4 +134,12 @@ return {
     ["zh-cn"] = "打开社交界面。",
     ru = "Открывает меню \"Ударная группа\"",
   },
+  open_commissary_view_key = {
+    en = "Commissary",
+    ["zh-cn"] = "杂货店",
+  },
+  open_commissary_view_key_description = {
+    en = "Opens the Commissary view.",
+    ["zh-cn"] = "打开杂货店界面。",
+  },
 }
