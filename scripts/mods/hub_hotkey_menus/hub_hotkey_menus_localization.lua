@@ -144,4 +144,10 @@ return {
     ["zh-cn"] = "打开杂货店界面。",
     ru = "Открывает меню магазина Косметических предметов.",
   },
+  open_penance_view_key = {
+    en = "Shrine Penitentax",
+  },
+  open_penance_view_key_description = {
+    en = "Opens the Penance view.",
+  },
 }
