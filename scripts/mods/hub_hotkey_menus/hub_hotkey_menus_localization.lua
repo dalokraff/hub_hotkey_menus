@@ -147,9 +147,11 @@ return {
   open_penance_view_key = {
     en = "Shrine Penitentax",
     ["zh-cn"] = "神龛忏悔者",
+    ru = "Искупления",
   },
   open_penance_view_key_description = {
     en = "Opens the Penance view.",
     ["zh-cn"] = "打开苦修界面。",
+    ru = "Открывает меню Искуплений.",
   },
 }
