@@ -29,8 +29,6 @@ local mod = get_mod("hub_hotkey_menus")
 -- ##########################################################
 -- ################## Variables #############################
 
-local InputUtils = require("scripts/managers/input/input_utils")
-
 local valid_lvls = {
 	shooting_range = true,
 	hub = true,
