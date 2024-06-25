@@ -112,17 +112,6 @@ return {
     ["zh-cn"] = "打开灵能室界面。",
     ru = "Открывает меню входа на Стрельбище.",
   },
-  -- inventory_view
-  open_inventory_view_key = {
-    en = "Inventory",
-    ["zh-cn"] = "物品库存",
-    ru = "Снаряжение",
-  },
-  open_inventory_view_key_description = {
-    en = "Opens the Inventory view.",
-    ["zh-cn"] = "打开物品库存界面。",
-    ru = "Открывает окно управления Снаряжением, Украшениями и Талантами.",
-  },
   -- social_view
   open_social_view_key = {
     en = "Social",

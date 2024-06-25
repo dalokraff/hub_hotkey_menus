@@ -29,24 +29,9 @@ local mod = get_mod("hub_hotkey_menus")
 -- ##########################################################
 -- ################## Variables #############################
 
-local InputUtils = require("scripts/managers/input/input_utils")
-
 local valid_lvls = {
 	shooting_range = true,
 	hub = true,
-}
-
---disables the default Inventroy hotkey "I"
-local GameModeSettings = require("scripts/settings/game_mode/game_mode_settings")
-GameModeSettings.hub.hotkeys.hotkeys["hotkey_inventory"] = nil
-GameModeSettings.hub.hotkeys.lookup["inventory_background_view"] = nil
-
---Patch tables for PsykaniumInvHotkey
-mod.PsykaniumInvHotkey_levels = {
-	shooting_range = true,
-}
-mod.PsykaniumInvHotkey_views = {
-	inventory_background_view = "hotkey_inventory",
 }
 
 -- ##########################################################
@@ -59,62 +44,8 @@ local is_in_valid_lvl = function()
 	end
 end
 
-local get_default_hotkey = function (hotkey_alias)
-	local _keyboard_devices = {
-		"keyboard",
-		"mouse"
-	}
-	local _gamepad_devices = {
-		xbox_controller = {
-			"xbox_controller"
-		},
-		ps4_controller = {
-			"ps4_controller"
-		}
-	}
-	local device_types = _keyboard_devices
-	
-	local input_manager = Managers.input
-	if input_manager:device_in_use("gamepad") then
-		if IS_XBS then
-			device_types = _gamepad_devices.xbox_controller
-		else
-			local device = input_manager:last_pressed_device()
-			local type = device:type()
-			device_types = _gamepad_devices[type] or _keyboard_devices
-		end
-	end
-
-	local alias = input_manager:alias_object("View")
-	local key_info = alias:get_keys_for_alias(hotkey_alias, 1, device_types)
-	local key_name = key_info.main
-
-	local device_type = InputUtils.key_device_type(key_name)
-	local usable_key_name = InputUtils.local_key_name(key_name, device_type)
-
-	return usable_key_name
-end
-
-local PsykaniumInvHotkey_patch = function(view)
-	local PsykaniumInvHotkey_mod = get_mod("PsykaniumInvHotkey")
-	if PsykaniumInvHotkey_mod then
-		local level_check = mod.PsykaniumInvHotkey_levels[Managers.state.game_mode:game_mode_name()]
-		local view_hotkey_alias = mod.PsykaniumInvHotkey_views[view]
-		local check = PsykaniumInvHotkey_mod:is_enabled() and level_check and view_hotkey_alias
-		if check then
-			local official_keybind = get_default_hotkey(view_hotkey_alias)
-			local current_mod_keybind = mod:get("open_inventory_view_key")[1]
-			return not (official_keybind == current_mod_keybind)
-		else
-			return true
-		end
-	else
-		return true
-	end
-end
-
 local can_activate_view = function(ui_manager, view)
-	return is_in_valid_lvl() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view)) and PsykaniumInvHotkey_patch(view)
+	return is_in_valid_lvl() and (not ui_manager:chat_using_input()) and (not ui_manager:has_active_view(view))
 end
 
 local close_views = function(view, ui_manager)
@@ -179,10 +110,6 @@ end
 
 mod.activate_social_view = function(self)
 	activate_hub_view("social_menu_view")
-end
-
-mod.activate_inventory_view = function(self)
-	activate_hub_view("inventory_background_view")
 end
 
 mod.activate_commissary_view = function(self)
