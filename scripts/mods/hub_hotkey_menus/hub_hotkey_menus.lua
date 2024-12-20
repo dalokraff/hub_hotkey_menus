@@ -120,6 +120,10 @@ mod.activate_penance_overview_view = function(self)
 	activate_hub_view("penance_overview_view")
 end
 
+mod.activate_havoc_background_view = function(self)
+	activate_hub_view("havoc_background_view")
+end
+
 -- mod.activate_main_menu_view = function(self)
 -- 	activate_hub_view("main_menu_background_view")
 -- end

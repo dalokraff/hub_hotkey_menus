@@ -143,4 +143,15 @@ return {
     ["zh-cn"] = "打开苦修界面。",
     ru = "Открывает меню Искуплений.",
   },
+  -- havoc_background
+  open_havoc_background_view = {
+    en = "Havoc Mode",
+    ["zh-cn"] = "Havoc Mode",
+    ru = "Havoc Mode",
+  },
+  open_havoc_background_view_description = {
+    en = "Opens the Havoc Menu.",
+    ["zh-cn"] = "Opens the Havoc Menu.",
+    ru = "Opens the Havoc Menu.",
+  },
 }
